@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NSTouristGuide</string>
+    <string name="btn_map_of_novi_sad">Map of Novi Sad</string>
+    <string name="btn_hs">Historical sights</string>
+    <string name="btn_restaurants">Restaurants</string>
+    <string name="btn_forecast">Weather forecast</string>
+    <string name="location_on">For best usage turn location on</string>
+</resources>
