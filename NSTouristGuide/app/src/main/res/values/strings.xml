@@ -5,4 +5,13 @@
     <string name="btn_restaurants">Restaurants</string>
     <string name="btn_forecast">Weather forecast</string>
     <string name="location_on">For best usage turn location on</string>
+    <string name="title_activity_map">Map of Novi Sad</string>
+    <string name="show_historical_sights">Show historical sights</string>
+    <string name="show_restaurants">Show restaurants</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="choose_image">Choose image</string>
+    <string name="save">Save</string>
+    <string name="address">Address</string>
+    <string name="image">image</string>
 </resources>

@@ -74,28 +74,44 @@ public class WeatherForecastActivity extends AppCompatActivity {
             @Override
             public void onResults(WundergroundResponse wundergroundResponse) {
                 city.setText("Novi Sad" + ", Serbia");
-                real_feel.setText("Real Feel " + wundergroundResponse.getCurrentObservation().getFeelsLikeC().toString());
-                temperature.setText(wundergroundResponse.getCurrentObservation().getTempC().toString() + "C");
+                real_feel.setText("Real Feel " + wundergroundResponse.getCurrentObservation().getFeelsLikeC().toString() + "°C");
+                temperature.setText(wundergroundResponse.getCurrentObservation().getTempC().toString() + "°C");
                 weather.setText(wundergroundResponse.getCurrentObservation().getWeather());
                 String condition = wundergroundResponse.getCurrentObservation().getWeather();
                 if(condition.equals("Clear")){
                     current.setBackgroundResource(R.drawable.clear_sky);
-                }else if(condition.equals("Partly cloudy")){
+                }else if(condition.equals("Partly Cloudy")){
                     current.setBackgroundResource(R.drawable.partly_cloudy);
+                }else if(condition.equals("Mostly Cloudy")){
+                    current.setBackgroundResource(R.drawable.mostly_cloudy);
+                }else if(condition.equals("Cloudy")){
+                    current.setBackgroundResource(R.drawable.cloudy);
+                }else if(condition.equals("Fog")){
+                    current.setBackgroundResource(R.drawable.fog);
+                }else if(condition.equals("Rain Shower")){
+                    current.setBackgroundResource(R.drawable.shower);
+                }else if(condition.equals("Thunderstorm")){
+                    current.setBackgroundResource(R.drawable.thunderstorm);
+                }else if(condition.equals("Snow")){
+                    current.setBackgroundResource(R.drawable.snow);
+                }else if(condition.equals("Light Rain")){
+                    current.setBackgroundResource(R.drawable.light_rain);
+                }else if(condition.equals("Rain")){
+                    current.setBackgroundResource(R.drawable.rain);
                 }
                 humidity.setText("Humidity: " + wundergroundResponse.getCurrentObservation().getRelativeHumidity());
                 ForecastResponse forecast = wundergroundResponse.getForecast();
                 List<ForecastDayResponse> simple = forecast.getSimpleForecast().getForecastDay();
-                first_high.setText(String.valueOf(simple.get(1).getHigh().getCelsius()));
-                first_low.setText(String.valueOf(simple.get(1).getLow().getCelsius()));
+                first_high.setText(String.valueOf("Max. " + simple.get(1).getHigh().getCelsius()+ "°C"));
+                first_low.setText(String.valueOf("Min. " + simple.get(1).getLow().getCelsius()+ "°C"));
                 first_cond.setText(simple.get(1).getConditions());
                 first_day.setText(String.valueOf(simple.get(1).getDate().getWeekday()));
-                second_high.setText(String.valueOf(simple.get(2).getHigh().getCelsius()));
-                second_low.setText(String.valueOf(simple.get(2).getLow().getCelsius()));
+                second_high.setText(String.valueOf("Max. " + simple.get(2).getHigh().getCelsius()+ "°C"));
+                second_low.setText(String.valueOf("Min. " + simple.get(2).getLow().getCelsius()+ "°C"));
                 second_cond.setText(simple.get(2).getConditions());
                 second_day.setText(String.valueOf(simple.get(2).getDate().getWeekday()));
-                third_high.setText(String.valueOf(simple.get(3).getHigh().getCelsius()));
-                third_low.setText(String.valueOf(simple.get(3).getLow().getCelsius()));
+                third_high.setText(String.valueOf("Max. " + simple.get(3).getHigh().getCelsius()+ "°C"));
+                third_low.setText(String.valueOf("Min. " + simple.get(3).getLow().getCelsius()+ "°C"));
                 third_cond.setText(simple.get(3).getConditions());
                 third_day.setText(String.valueOf(simple.get(3).getDate().getWeekday()));
             }

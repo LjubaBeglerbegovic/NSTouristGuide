@@ -27,38 +27,45 @@
             android:layout_height="wrap_content"
             android:id="@+id/temperature"
             android:textSize="50sp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/city"
             android:textSize="30sp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/real_feel"
             android:textSize="30sp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/weather"
             android:textSize="30sp"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/humidity"
             android:textSize="30sp"
             android:layout_margin="5dp"
-            android:layout_weight="2"/>
+            android:layout_weight="4"
+            android:textStyle="bold"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="3"
-            android:layout_marginBottom="0dp">
+            android:background="@color/transparent"
+            android:gravity="bottom"
+            android:layout_weight="1">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -71,31 +78,30 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/first_date"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_dark"/>
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/first_temp_high"
                     android:textSize="15sp"
-                    android:textColor="@color/temp_max"/>
+                    android:textColor="@color/temp_max"
+                    android:textStyle="italic"
+                    android:paddingTop="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/first_temp_low"
                     android:textSize="15sp"
-                    android:textColor="@color/temp_min"/>
+                    android:textColor="@color/temp_min"
+                    android:textStyle="italic"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/first_cond"
                     android:textSize="15sp"
-                    android:textColor="@color/primary_dark"/>
+                    android:textStyle="italic"
+                    android:paddingTop="10dp"/>
             </LinearLayout>
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/primary_dark" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,31 +114,30 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/second_date"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_dark"/>
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/second_temp_high"
                     android:textSize="15sp"
-                    android:textColor="@color/temp_max"/>
+                    android:textColor="@color/temp_max"
+                    android:textStyle="italic"
+                    android:paddingTop="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/second_temp_low"
                     android:textSize="15sp"
-                    android:textColor="@color/temp_min"/>
+                    android:textColor="@color/temp_min"
+                    android:textStyle="italic"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/second_cond"
                     android:textSize="15sp"
-                    android:textColor="@color/primary_dark"/>
+                    android:textStyle="italic"
+                    android:paddingTop="10dp"/>
             </LinearLayout>
-            <View
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:background="@color/primary_dark" />
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,26 +150,31 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/third_date"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_dark"/>
+                    android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/third_temp_high"
                     android:textSize="15sp"
-                    android:textColor="@color/temp_max"/>
+                    android:textColor="@color/temp_max"
+                    android:textStyle="italic"
+                    android:paddingTop="10dp"
+                    android:gravity="center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/third_temp_low"
                     android:textSize="15sp"
-                    android:textColor="@color/temp_min"/>
+                    android:textColor="@color/temp_min"
+                    android:textStyle="italic"
+                    android:gravity="center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/third_cond"
                     android:textSize="15sp"
-                    android:textColor="@color/primary_dark"/>
+                    android:textStyle="italic"
+                    android:paddingTop="10dp"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
